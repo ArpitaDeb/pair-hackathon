@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "./MainPage.scss";
+import img from "../../images/Arpita.jpg";
+import padma from "../../images/Padma.jpg";
 
 function MainPage() {
   const [data, setdata] = useState([]);
@@ -26,11 +28,7 @@ function MainPage() {
       <div className="card__item">
         <div className="card__body">
           <div className="imgbox">
-            <img
-              src="https://image.freepik.com/free-photo/young-beautiful-woman-pink-warm-sweater-natural-look-smiling-portrait-isolated-long-hair_285396-896.jpg"
-              alt=""
-              className="img"
-            ></img>
+            <img src={padma} alt="" className="img"></img>
           </div>
           <h2 className="card__title">{data[0].name}</h2>
           <p>{data[0].title}</p>
@@ -40,7 +38,9 @@ function MainPage() {
       </div>
       <div className="card__item">
         <div className="card__body">
-          <img></img>
+          <div className="imgbox">
+            <img src={img} alt="" className="img"></img>
+          </div>
           <h2 className="card__title">{data[1].name}</h2>
           <p>{data[1].title}</p>
           <p>{data[1].emal}</p>
