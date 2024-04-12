@@ -5,9 +5,9 @@ import NavBar from "./Component/Navbar/Navbar";
 function App() {
   return (
     <div className="App">
-      {/* <BrowserRouter> */}
+      <BrowserRouter>
       <NavBar />
-      {/* </BrowserRouter> */}
+      </BrowserRouter>
     </div>
   );
 }

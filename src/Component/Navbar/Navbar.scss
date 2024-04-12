@@ -24,6 +24,43 @@
       padding-top: 1.2rem;
     }
   }
+  &__logo {
+    height: 50px;
+    margin-bottom: 0.1rem;
+    &:hover {
+      animation: tilt-shaking 0.5s infinite;
+    }
+    @keyframes tilt-shaking {
+      0% {
+        transform: rotate(0);
+      }
+      25% {
+        transform: rotate(5deg);
+      }
+      50% {
+        transform: rotate(0);
+      }
+      75% {
+        transform: rotate(-5deg);
+      }
+      100% {
+        transform: rotate(0);
+      }
+    }
+    @include tablet {
+      justify-content: flex-start;
+      vertical-align: middle;
+      margin-bottom: 0;
+      height: 60px;
+      margin-left: 1rem;
+      padding: 1rem;
+    }
+    @include desktop {
+      justify-content: flex-start;
+      vertical-align: middle;
+      height: 60px;
+    }
+  }
   &__navbar {
     text-align: center;
     width: 100vw;
@@ -64,6 +101,11 @@
       font-weight: 800;
       color: $silver;
     }
+  }
+  &__button {
+    border: none;
+    background: none;
+    cursor: pointer;
   }
   &__active {
     border-bottom: 3px solid $white;
