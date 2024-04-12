@@ -8,6 +8,7 @@ const Navbar = () => {
   
   const handleButtonOnClick = () => {
     console.log("grads");
+    navigate('/');
     
   };
   const handlePortOnClick = () => {
@@ -20,12 +21,6 @@ const Navbar = () => {
       <img className="navigation__logo" src={logo} alt="Portfolio-logo" />
       <nav className="navigation__navbar">
         <ul className="navigation__list">
-          {/* <li className="navigation__active">
-            <a onClick={handleButtonOnClick} className="navigation__item">BrainStation Grads</a>
-          </li>
-          <li className="navigation__item">
-            <a onClick={handlePortOnClick} className="navigation__item">Portfolio</a>
-          </li> */}
           <li className="navigation__active">
             <button onClick={handleButtonOnClick} className="navigation__item navigation__button">BrainStation Grads</button>
           </li>
