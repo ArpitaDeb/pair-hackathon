@@ -19,6 +19,9 @@ p {
 .img {
   width: 100%;
   border-radius: 5%;
+  height: 25vw;
+  background-image: cover;
+  object-fit: contain;
 }
 
 .imgbox {
