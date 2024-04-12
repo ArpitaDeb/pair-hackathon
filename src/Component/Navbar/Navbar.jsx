@@ -3,7 +3,8 @@ import "./Navbar.scss";
 
 const Navbar = () => {
   return (
-    <header className="navigation-wrapper">
+    <header className="navigation">
+      <div class="navigation__wrapper">
       <h1> Portfolio </h1>
       <nav className="navigation__navbar">
         <ul className="navigation__list">
@@ -15,6 +16,7 @@ const Navbar = () => {
           </li>
         </ul>
       </nav>
+      </div>
     </header>
   );
 };

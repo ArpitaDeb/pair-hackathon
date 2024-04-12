@@ -2,5 +2,26 @@
   box-sizing: border-box;
 }
 body {
+  font-family: "Pacifico", "sans-serif";
+  font-weight: 400;
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
   margin: 0;
+  @include tablet {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+  }
+}
+h1 {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  @include tablet {
+    font-size: 2.0625rem;
+    line-height: 2.75rem;
+    margin-top: 2.25rem;
+    margin-bottom: 1.5rem;
+  }
 }
