@@ -50,9 +50,9 @@ function ProfilePage() {
 
   return (
     <>
-      <div className="card">
-        <div className="card__item card__item--change" key={data.id}>
-          <div className="card__body">
+      <div>
+        <div className=" card__item--change" key={data.id}>
+          <div>
             <div className="imgbox">
               {console.log(data.id, typeof data.id)}
               <img
