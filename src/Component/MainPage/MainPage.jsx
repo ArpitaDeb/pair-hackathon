@@ -3,6 +3,7 @@ import axios from "axios";
 import "./MainPage.scss";
 import img from "../../images/Arpita.jpg";
 import padma from "../../images/Padma.jpg";
+import { Link } from "react-router-dom";
 
 function MainPage() {
   const [data, setdata] = useState([]);
@@ -25,28 +26,32 @@ function MainPage() {
 
   return (
     <div className="card">
-      <div className="card__item">
-        <div className="card__body">
-          <div className="imgbox">
-            <img src={padma} alt="" className="img"></img>
+      <Link to={`${data[0].id}`} className="card__item">
+        <div key={data[0].id}>
+          <div className="card__body">
+            <div className="imgbox">
+              <img src={padma} alt="" className="img"></img>
+            </div>
+            <h2 className="card__title">{data[0].name}</h2>
+            <p>{data[0].title}</p>
+            <p>{data[0].emal}</p>
+            <p>{`Skill Sets: ${data[0].skills}\n`}</p>
           </div>
-          <h2 className="card__title">{data[0].name}</h2>
-          <p>{data[0].title}</p>
-          <p>{data[0].emal}</p>
-          <p>{`Skill Sets: ${data[0].skills}\n`}</p>
         </div>
-      </div>
-      <div className="card__item">
-        <div className="card__body">
-          <div className="imgbox">
-            <img src={img} alt="" className="img"></img>
+      </Link>
+      <Link to={`${data[1].id}`} className="card__item">
+        <div key={data[1].id}>
+          <div className="card__body">
+            <div className="imgbox">
+              <img src={img} alt="" className="img"></img>
+            </div>
+            <h2 className="card__title">{data[1].name}</h2>
+            <p>{data[1].title}</p>
+            <p>{data[1].emal}</p>
+            <p>{`Skill Sets: ${data[1].skills}`}</p>
           </div>
-          <h2 className="card__title">{data[1].name}</h2>
-          <p>{data[1].title}</p>
-          <p>{data[1].emal}</p>
-          <p>{`Skill Sets: ${data[1].skills}`}</p>
         </div>
-      </div>
+      </Link>
     </div>
   );
 }

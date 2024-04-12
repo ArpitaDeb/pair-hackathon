@@ -14,16 +14,23 @@ p {
     border-radius: 2rem;
     padding: 0.5rem;
     padding-left: 1rem;
+    text-decoration: inherit;
+    color: inherit;
   }
 }
 .img {
   width: 100%;
   border-radius: 5%;
-  height: 25vw;
+  height: 20vw;
   background-image: cover;
   object-fit: contain;
 }
 
 .imgbox {
   width: 100%;
+}
+
+button {
+  background-color: inherit;
+  border: none;
 }
