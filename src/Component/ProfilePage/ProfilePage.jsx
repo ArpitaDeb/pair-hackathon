@@ -30,11 +30,12 @@ function ProfilePage() {
 
   return (
     <div className="card">
-      <div className="card__item" key={data.id}>
+      <div className="card__item card__item--change" key={data.id}>
         <div className="card__body">
           <div className="imgbox">
+            {console.log(data.id, typeof data.id)}
             <img
-              src={data.id === 0 ? padma : Arpita}
+              src={Number(data.id) === 0 ? padma : Arpita}
               alt=""
               className="img"
             ></img>
@@ -44,7 +45,19 @@ function ProfilePage() {
           <p>{data.emal}</p>
           <p>{`Skill Sets: ${data.skills}\n`}</p>
           <h3>EXPERIENCE</h3>
-          <p>{}</p>
+          <div>
+            <ul>
+              {data.experience.map((element) => {
+                return (
+                  <li>
+                    {`${element.company} , ${element.location}`}
+                    <p>{element.Duration}</p>
+                    <p>{element.description}</p>
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
         </div>
       </div>
     </div>
